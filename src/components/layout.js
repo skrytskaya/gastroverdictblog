@@ -17,7 +17,7 @@ import { useScrollElementWindow } from "../utils/hooks"
 
 const Layout = ({ children, ref }) => {
   const headerRef = React.createRef()
-  useScrollElementWindow(headerRef, window, { className: 'hidden' })
+  useScrollElementWindow(headerRef, { className: 'hidden' })
   return (
     <StaticQuery
     query={graphql`
