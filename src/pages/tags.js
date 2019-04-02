@@ -10,8 +10,8 @@ const TagsPage = props => {
             <div className="tags">
                 <h1>All tags</h1>
                 {
-                    data.map(tag => (
-                        <Link to={`/${tag.fieldValue}`} >
+                    data.map((tag, i) => (
+                        <Link to={`/${tag.fieldValue}`} key={i} >
                             {tag.fieldValue} {`(${tag.totalCount})`}
                         </Link>
                     ))

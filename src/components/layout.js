@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
@@ -17,7 +17,7 @@ import { useScrollElementWindow } from "../utils/hooks"
 
 const Layout = ({ children, ref }) => {
   const headerRef = React.createRef()
-  useScrollElementWindow(headerRef, window)
+  useScrollElementWindow(headerRef, window, { className: 'hidden' })
   return (
     <StaticQuery
     query={graphql`
