@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout';
-// import '../pages/post.css'
+import Layout from '../../components/layout';
+import './tag.scss'
 
 function Tags(props) {
     const posts = props.data.allMarkdownRemark.edges;
     const { tag } = props.pageContext;
     return (
         <Layout>
-            <h1>{`Available posts  in ${tag}`}</h1>
+            <h1>{`Available posts in ${tag}`}</h1>
             <div className="tags">
                 {
                     posts.map(({ node }, i) => (

@@ -1,0 +1,22 @@
+.share {
+    padding: 1rem;
+
+    &__title {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+         
+        li {
+            border-radius: 50%;
+    
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

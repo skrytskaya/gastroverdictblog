@@ -1,7 +1,7 @@
 ---
 title: My second Blog post
-date: '2018-12-02'
-image: ''
+date: '2019-03-15T17:12:33.962Z'
+image: 'twitter.png'
 tags: ['javascript','react']
 ---
 

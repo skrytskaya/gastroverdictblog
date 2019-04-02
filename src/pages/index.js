@@ -1,21 +1,23 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-// import './post.css';
 import Layout from '../components/layout'
+import '../templates/blog-post/blog-post.scss'
 
 const IndexPage = (props) => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
-      {postList.edges.map(({ node }, i) => (
-        <Link to={node.fields.slug} key={i} className="link" >
-          <div className="post-list">
-            <h1>{node.frontmatter.title}</h1>
-            <span>{node.frontmatter.date}</span>
-            <p>{node.excerpt}</p>
-          </div>
-        </Link>
-      ))}
+      <div className="posts">
+        {postList.edges.map(({ node }, i) => (
+          <Link to={node.fields.slug} key={i} className="link" >
+            <div className="posts__item">
+              <h1>{node.frontmatter.title}</h1>
+              <span>{node.frontmatter.date}</span>
+              <p>{node.excerpt}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </Layout>
   )
 }
@@ -32,7 +34,7 @@ export const listQuery = graphql`
           }
           excerpt(pruneLength: 250)
           frontmatter {
-            date
+            date(formatString: "MMMM Do YYYY")
             title
           }
         }

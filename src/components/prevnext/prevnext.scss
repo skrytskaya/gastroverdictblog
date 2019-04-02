@@ -1,0 +1,23 @@
+@import '../../assets//styles/index.scss';
+
+.prevnext {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    &--right {
+        justify-content: flex-end;
+    }
+
+    a {
+        text-decoration: none;
+        &:hover { 
+            opacity: 0.8;
+        }
+    }
+
+    &__title {
+        color: $color-accent;
+        font-weight: 500;
+    }
+}

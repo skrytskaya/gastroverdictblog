@@ -1,0 +1,14 @@
+@import '../../assets/styles/index.scss';
+
+.footer {
+    z-index: 10;
+    height: 11rem;
+    position: relative;
+    background-color: $color-black;
+    color: $color-white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

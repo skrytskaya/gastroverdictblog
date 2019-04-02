@@ -1,7 +1,7 @@
 ---
 title: My first Blog post
 description: This post is related to the gatsbyjs
-date: '2018-12-2'
+date: '2019-03-05T17:12:33.962Z'
 image: gastroverdict.png
 tags: ['javascript','react','gatsby']
 ---

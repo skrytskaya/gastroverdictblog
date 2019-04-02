@@ -1,0 +1,47 @@
+@import '../../assets/styles/index.scss';
+
+.posts {
+    padding-top: 7rem;
+
+    &__item {
+        border: 1px solid $color-light-gray;
+        padding: 1.5rem;
+        box-shadow: 0 -1px 4px $color-light-gray;
+        margin: 1rem;
+
+        span {
+            color: $color-accent;
+        }
+
+        h1 {
+            padding: 0;
+        }
+
+        &:hover {
+            background-color: $color-light-gray;
+            color: $color-black;
+        }
+    }
+}
+
+.post {
+    &__tags {
+        padding: 3rem;
+
+        a {
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+// img{
+//   height: 90% !important;
+// }
