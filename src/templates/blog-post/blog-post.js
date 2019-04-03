@@ -4,13 +4,14 @@ import { graphql } from 'gatsby'
 import PrevNext from '../../components/prevnext/prevnext'
 // import MetaTags from '../components/Metatags'
 import Share from '../../components/share/share'
+import Img from 'gatsby-image'
 import './blog-post.scss'
 
 function BlogPost(props) {
     const url = props.data.site.siteMetadata.siteUrl
     // const thumbnail = props.data.markdownRemark.frontmatter.image &&
     //       props.data.markdownRemark.frontmatter.image.childImageSharp.resize.src
-    const { title, image, tags } = props.data.markdownRemark.frontmatter;
+    const { title, image, tags, alt } = props.data.markdownRemark.frontmatter;
     const { prev, next } = props.pageContext;
 
     return (
@@ -24,12 +25,20 @@ function BlogPost(props) {
             /> */}
             <div className="post">
                 <h1>{title}</h1>
-                {image && <img src={require(`../../assets/images/${image}`)} />}
-                <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+                {image && 
+                    <img 
+                        className="post__image"
+                        src={require(`../../assets/images/${image}`)} 
+                        // sizes="(min-width: 40em) 80vw, 100vw"
+                        alt={`${alt ? alt : 'image' }`}
+                    />
+                }
+                {/* {image && <Img sizes={featured.frontmatter.image.childImageSharp.sizes} />} */}
+                <div className="post__content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
                 <div className="post__tags">
                     <span>Tagged in </span>
                     {tags.map((tag, i) => (
-                        <a href={`/${tag}`} key={i} style={{ marginLeft: "10px" }} >{tag}</a>
+                        <a href={`/${tag}`} key={i} style={{ marginLeft: "1rem" }} >{tag}</a>
                     ))}
                 </div>
                 <Share 
@@ -48,14 +57,15 @@ export default BlogPost
 
 export const query = graphql`
 
-query PostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+query PostQuery {
+    markdownRemark {
        html
        excerpt
        frontmatter {
         title
         tags
-        image
+        image 
+        alt
        }
    }
    site {

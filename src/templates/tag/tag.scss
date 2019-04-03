@@ -1,19 +1,24 @@
 @import '../../assets/styles/index.scss';
 
-.tags{
-    display: flex;
-    flex-direction: column;
 
-    a {
-        margin-bottom: 2rem;
-        list-style: none;
-        background-color: $color-light-gray;
-        border: 1px solid #fff;
-        border: 1px solid #fff;
-        // width: 80%;
-        padding: 1rem;
-        text-decoration: none;
-        // font-size: 1.1rem;
-        // color: rgb(31, 26, 26);
+.tags {
+    padding-top: 7rem;
+    
+    &__list{
+        display: flex;
+        flex-direction: column;
+
+        a {
+            margin-bottom: 2rem;
+            list-style: none;
+            background-color: $color-light-gray;
+            border: 1px solid #fff;
+            border: 1px solid #fff;
+            // width: 80%;
+            padding: 1rem;
+            text-decoration: none;
+            // font-size: 1.1rem;
+            // color: rgb(31, 26, 26);
+        }
     }
 }

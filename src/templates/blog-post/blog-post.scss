@@ -25,6 +25,14 @@
 }
 
 .post {
+    padding-top: 7rem;
+
+    &__content {
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
     &__tags {
         padding: 3rem;
 
@@ -34,6 +42,17 @@
                 color: $color-accent;
             }
         }
+
+        @include respond(phone) {
+            text-align: center;
+            padding-bottom: 0;
+        }
+    }
+
+    &__image {
+        @include respond(phone) {
+            width: calc(100vw - 3rem);
+        }
     }
 }
 
@@ -41,7 +60,3 @@
     text-decoration: none;
     color: black;
 }
-
-// img{
-//   height: 90% !important;
-// }

@@ -25,15 +25,15 @@ header {
       position: relative;
 
     &--center {
-      flex: 0 1 auto;
+      // flex: 0 1 auto;
       position: absolute;
+      top: 58%;
       left: 50%;
-      transform: translateX(-50%);
-      top: -10px;
+      transform: translate(-50%, -50%);
 
       img {
-        width: 9.5rem;
-        height: 9.5rem;
+        width: 7rem;
+        height: 7rem;
         border-radius: 50%;
       }
 

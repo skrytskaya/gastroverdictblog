@@ -5,10 +5,16 @@
     height: 11rem;
     position: relative;
     background-color: $color-black;
-    color: $color-white;
+    color: $color-light-gray;
 
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+
+    &__icons {
+        a:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
 }

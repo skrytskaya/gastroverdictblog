@@ -1,0 +1,18 @@
+@import "../assets/styles/index.scss";
+
+.about {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    position: absolute;
+    width: 70vw;
+
+    h1 {
+        text-align: center;
+    }
+
+    @include respond(phone) {
+        width: 90vw;
+        font-size: 2rem;
+    }
+}

@@ -19,5 +19,15 @@
     &__title {
         color: $color-accent;
         font-weight: 500;
+
+        @include respond(mobile) {
+            font-size: 2rem;
+        }
+    }
+
+    &__article {
+        @include respond(mobile) {
+            display: none;
+        }
     }
 }

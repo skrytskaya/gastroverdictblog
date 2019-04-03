@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React, { useEffect } from "react"
+import React from "react"
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
@@ -41,13 +41,7 @@ const Layout = ({ children, ref }) => {
         </Helmet>
         <Header ref={headerRef} siteTitle={data.site.siteMetadata.title} />
         <div>
-          <main 
-            style={{
-              paddingTop: '7rem',
-              minHeight: '100vh'
-            }}
-            className="wrapper"
-          >{children}</main>
+          <main className="wrapper">{children}</main>
           <Footer />
         </div>
       </>

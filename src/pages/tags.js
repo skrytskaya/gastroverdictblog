@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from "gatsby"
 import Layout from '../components/layout'
-import '../templates/tag/tag.scss'
+import './tags.scss'
 
 const TagsPage = props => {
     const data = props.data.allMarkdownRemark.group
@@ -12,7 +12,10 @@ const TagsPage = props => {
                 {
                     data.map((tag, i) => (
                         <Link to={`/${tag.fieldValue}`} key={i} >
-                            {tag.fieldValue} {`(${tag.totalCount})`}
+                            <span className="tags__name">
+                              {tag.fieldValue}
+                              {/* <span className="tags__count">{tag.totalCount}</span> */}
+                            </span> 
                         </Link>
                     ))
                 }

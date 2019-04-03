@@ -15,7 +15,7 @@ const Header = React.forwardRef(({ siteTitle }, ref) => {
                         className="nav-item"
                         activeClassName="selected"
                     >
-                        <img src={Logo}></img>
+                        <img src={Logo} alt="logo"></img>
                     </Link>
                 </div>
                 <div className="nav--right">
@@ -30,12 +30,6 @@ const Header = React.forwardRef(({ siteTitle }, ref) => {
                         activeClassName="selected"
                     >
                         About
-                    </Link>
-                    <Link to="/contact"
-                        className="nav-item"
-                        activeClassName="selected"
-                    >
-                        Contact
                     </Link>
                 </div>
             </div>
