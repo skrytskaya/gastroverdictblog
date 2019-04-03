@@ -2,6 +2,7 @@ import React from 'react'
 import instagramIcon from '../../assets/images/instagram.png'
 import gmailIcon from '../../assets/images/gmail.png'
 import './footer.scss'
+import { Link } from 'gatsby';
 
 
 const Footer = () => {
@@ -15,7 +16,7 @@ const Footer = () => {
           <img src={gmailIcon} alt="gmail" />
         </a>
       </div>
-      © {new Date().getFullYear()} Gastroverdict
+      <Link className="footer__blog" to='/'>© {new Date().getFullYear()} Gastroverdict</Link>
     </div>
   )
 }

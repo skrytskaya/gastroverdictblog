@@ -33,13 +33,20 @@ function BlogPost(props) {
                         alt={`${alt ? alt : 'image' }`}
                     />
                 } */}
-                {image && <Img fluid={image.childImageSharp.fluid} />}
+                {image && 
+                    <Img 
+                        fluid={image.childImageSharp.fluid} 
+                        alt={`${alt ? alt : 'image' }`}
+                    />
+                }
                 <div className="post__content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
                 <div className="post__tags">
                     <span>Tagged in </span>
-                    {tags.map((tag, i) => (
-                        <a href={`/${tag}`} key={i} style={{ marginLeft: "1rem" }} >{tag}</a>
-                    ))}
+                    <div className="post__tags-wrapper">
+                        {tags.map((tag, i) => (
+                            <a href={`/${tag}`} key={i} style={{ marginLeft: "1rem" }} >{tag}</a>
+                        ))}
+                    </div>
                 </div>
                 <Share 
                     title={title} 
@@ -69,7 +76,7 @@ query PostQuery($slug: String!) {
                 resize(width: 1000, height: 420) {
                   src
                 }
-                fluid(maxWidth: 786) {
+                fluid(maxWidth: 900) {
                   ...GatsbyImageSharpFluid
                 }
               }

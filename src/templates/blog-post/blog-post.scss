@@ -34,8 +34,15 @@
         }
     }
 
+    &__tags-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     &__tags {
         padding: 3rem;
+        text-align: center;
 
         a {
 
@@ -45,14 +52,7 @@
         }
 
         @include respond(phone) {
-            text-align: center;
             padding-bottom: 0;
-        }
-    }
-
-    &__image {
-        @include respond(phone) {
-            width: calc(100vw - 3rem);
         }
     }
 }

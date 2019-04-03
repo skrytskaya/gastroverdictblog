@@ -4,7 +4,7 @@ description: This post is related to the gatsbyjs
 date: '2019-03-05T17:12:33.962Z'
 image: './gastroverdict.png'
 alt: first image
-tags: ['javascript','react','gatsby']
+tags: ['javascript','react','gatsby', 'tag1', 'tag2', 'tag3', 'tag4', 'tag15', 'tag6', 'tag7', 'tag8', 'tag9']
 ---
 
 ## Why do we use it?

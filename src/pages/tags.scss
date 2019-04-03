@@ -5,6 +5,7 @@
 
     a {
         text-decoration: none;
+        margin: 0.5rem
     }
 
     &__name {
@@ -13,8 +14,6 @@
         padding: .6rem 1.5rem;
         color: $color-light-gray;
         transition: all 300ms ease-in-out;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
 
         &:hover {
             color: $color-white;
@@ -25,5 +24,11 @@
             margin-right: .5rem;
             margin-bottom: .5rem;
         }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
