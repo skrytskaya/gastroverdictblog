@@ -25,15 +25,15 @@ function BlogPost(props) {
             /> */}
             <div className="post">
                 <h1>{title}</h1>
-                {image && 
+                {/* {image && 
                     <img 
                         className="post__image"
                         src={require(`../../assets/images/${image}`)} 
                         // sizes="(min-width: 40em) 80vw, 100vw"
                         alt={`${alt ? alt : 'image' }`}
                     />
-                }
-                {/* {image && <Img sizes={featured.frontmatter.image.childImageSharp.sizes} />} */}
+                } */}
+                {image && <Img fluid={image.childImageSharp.fluid} />}
                 <div className="post__content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
                 <div className="post__tags">
                     <span>Tagged in </span>
@@ -57,14 +57,23 @@ export default BlogPost
 
 export const query = graphql`
 
-query PostQuery {
-    markdownRemark {
+query PostQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
        html
        excerpt
        frontmatter {
         title
         tags
-        image 
+        image {
+            childImageSharp {
+                resize(width: 1000, height: 420) {
+                  src
+                }
+                fluid(maxWidth: 786) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+        }
         alt
        }
    }

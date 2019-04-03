@@ -28,6 +28,7 @@
     padding-top: 7rem;
 
     &__content {
+        margin-top: 3rem;
         @include respond(phone) {
             font-size: 2rem;
         }
