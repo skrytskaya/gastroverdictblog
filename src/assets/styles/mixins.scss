@@ -2,7 +2,7 @@
 /*
 0 - 480px:   Mobile
 480 - 635px:      Phone
-635 - 830px:    Tablet portrait
+635 - 930px:    Tablet portrait
 830 - 1000px:   Tablet landscape
 [1200 - 1800] is where our normal styles apply
 1800px + :      Big desktop
@@ -25,8 +25,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (max-width: 39.7em) { @content };
     }
     @if $breakpoint == tab-port {
-        // 830px
-        @media only screen and (max-width: 51.8em) { @content };
+        // 930px
+        @media only screen and (max-width: 58.12em) { @content };
     }
     @if $breakpoint == tab-land {
         // 1000px

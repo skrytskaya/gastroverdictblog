@@ -2,27 +2,26 @@ import React from 'react';
 import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
 import PrevNext from '../../components/prevnext/prevnext'
-// import MetaTags from '../components/Metatags'
+import MetaTags from '../../components/metatags'
 import Share from '../../components/share/share'
 import Img from 'gatsby-image'
 import './blog-post.scss'
 
 function BlogPost(props) {
     const url = props.data.site.siteMetadata.siteUrl
-    // const thumbnail = props.data.markdownRemark.frontmatter.image &&
-    //       props.data.markdownRemark.frontmatter.image.childImageSharp.resize.src
+    const thumbnail = props.data.markdownRemark.frontmatter.image && props.data.markdownRemark.frontmatter.image.childImageSharp.resize.src
     const { title, image, tags, alt } = props.data.markdownRemark.frontmatter;
     const { prev, next } = props.pageContext;
 
     return (
         <Layout>
-            {/* <MetaTags
+            <MetaTags
                 title={title}
                 description={props.data.markdownRemark.excerpt}
-                // thumbnail={thumbnail && url + thumbnail}
-                // url={url}
+                thumbnail={thumbnail && url + thumbnail}
+                url={url}
                 pathname={props.location.pathname}
-            /> */}
+            />
             <div className="post">
                 <h1>{title}</h1>
                 {/* {image && 
