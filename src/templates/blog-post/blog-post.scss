@@ -1,8 +1,6 @@
 @import '../../assets/styles/index.scss';
 
 .posts {
-    padding-top: 7rem;
-
     &__item {
         border: 1px solid $color-light-gray;
         padding: 1.5rem;
@@ -25,8 +23,6 @@
 }
 
 .post {
-    padding-top: 7rem;
-
     &__content {
         margin-top: 3rem;
         @include respond(phone) {

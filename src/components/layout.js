@@ -41,7 +41,10 @@ const Layout = ({ children, ref }) => {
         </Helmet>
         <Header ref={headerRef} siteTitle={data.site.siteMetadata.title} />
         <div>
-          <main className="wrapper">{children}</main>
+          <main 
+            className="wrapper"
+            style={{paddingTop: '7rem'}}
+          >{children}</main>
           <Footer />
         </div>
       </>
