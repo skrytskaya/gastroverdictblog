@@ -32,12 +32,12 @@ function BlogPost(props) {
                         alt={`${alt ? alt : 'image' }`}
                     />
                 } */}
-                {image && 
+                {/* {image && 
                     <Img 
                         fluid={image.childImageSharp.fluid} 
                         alt={`${alt ? alt : 'image' }`}
                     />
-                }
+                } */}
                 <div className="post__content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
                 <div className="post__tags">
                     <span>Tagged in </span>
@@ -47,11 +47,11 @@ function BlogPost(props) {
                         ))}
                     </div>
                 </div>
-                <Share 
-                    title={title} 
-                    url={url} 
-                    pathname={props.location.pathname} 
-                />  
+                <Share
+                    title={title}
+                    url={url}
+                    pathname={props.location.pathname}
+                />
                 <PrevNext prev={prev && prev.node} next={next && next.node} />
             </div>
         </Layout>
@@ -70,18 +70,7 @@ query PostQuery($slug: String!) {
        frontmatter {
         title
         tags
-        image {
-            childImageSharp {
-                resize(width: 1000, height: 420) {
-                  src
-                }
-                fluid(maxWidth: 900) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-        }
-        alt
-       }
+    }
    }
    site {
     siteMetadata {
