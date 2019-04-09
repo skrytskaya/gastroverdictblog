@@ -1,9 +1,12 @@
 ---
+date: '2019-03-30T17:12:33.962Z'
 title: My third Blog post
 description: This post is related to the gatsbyjs
-date: '2019-03-30T17:12:33.962Z'
-image: 'gastroverdict.png'
-tags: ['javascript','react','gatsby']
+tags:
+  - javascript
+  - react
+  - gatsby
+image: ''
 ---
 
 ## Why do we use it?
