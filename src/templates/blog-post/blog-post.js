@@ -9,16 +9,17 @@ import './blog-post.scss'
 
 function BlogPost(props) {
     const url = props.data.site.siteMetadata.siteUrl
-    const thumbnail = props.data.markdownRemark.frontmatter.image && props.data.markdownRemark.frontmatter.image.childImageSharp.resize.src
+    // const thumbnail = props.data.markdownRemark.frontmatter.image && props.data.markdownRemark.frontmatter.image.childImageSharp.resize.src
     const { title, image, tags, alt } = props.data.markdownRemark.frontmatter;
     const { prev, next } = props.pageContext;
+    console.log({image})
 
     return (
         <Layout>
             <MetaTags
                 title={title}
                 description={props.data.markdownRemark.excerpt}
-                thumbnail={thumbnail && url + thumbnail}
+                // thumbnail={thumbnail && url + thumbnail}
                 url={url}
                 pathname={props.location.pathname}
             />
@@ -47,11 +48,11 @@ function BlogPost(props) {
                         ))}
                     </div>
                 </div>
-                <Share
-                    title={title}
-                    url={url}
-                    pathname={props.location.pathname}
-                />
+                <Share 
+                    title={title} 
+                    url={url} 
+                    pathname={props.location.pathname} 
+                />  
                 <PrevNext prev={prev && prev.node} next={next && next.node} />
             </div>
         </Layout>
@@ -70,7 +71,9 @@ query PostQuery($slug: String!) {
        frontmatter {
         title
         tags
-    }
+        image 
+        alt
+       }
    }
    site {
     siteMetadata {
@@ -79,3 +82,13 @@ query PostQuery($slug: String!) {
    }
 }
 `
+// {
+//     childImageSharp {
+//         resize(width: 1000, height: 420) {
+//           src
+//         }
+//         fluid(maxWidth: 900) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+// }

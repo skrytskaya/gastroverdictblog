@@ -2,7 +2,7 @@
 title: My fourth Blog post
 description: This post is related to the gatsbyjs
 date: '2019-04-02T17:12:33.962Z'
-image: gastroverdict.png
+image: /assets/images/gastroverdict.png
 tags: ['javascript','react','gatsby']
 ---
 

@@ -1,20 +1,19 @@
 backend:
   name: github
-  repo: skrytskaya/gastroverdictblog
+  repo: skrytskaya/gastroverdictblog 
 
-media_folder: "src/assets/images"
-public_folder: "/assets/images"
-
+media_folder: static/uploads
+public_folder: /uploads
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content"
+    folder: "src/pages"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Tags", name: "tags", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "text", required: false}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown" }
