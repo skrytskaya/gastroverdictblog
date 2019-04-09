@@ -25,14 +25,16 @@ function BlogPost(props) {
             />
             <div className="post">
                 <h1>{title}</h1>
-                {/* {image && 
-                    <img 
-                        className="post__image"
-                        src={require(`../../assets/images/${image}`)} 
+                <div className="post__image">
+                    {image && 
+                    <img
+                        src={image} 
                         // sizes="(min-width: 40em) 80vw, 100vw"
                         alt={`${alt ? alt : 'image' }`}
                     />
-                } */}
+                }
+                </div>
+                
                 {/* {image && 
                     <Img 
                         fluid={image.childImageSharp.fluid} 
@@ -72,6 +74,7 @@ query PostQuery($slug: String!) {
         title
         tags
         image 
+        alt
        }
    }
    site {

@@ -16,5 +16,5 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tags", name: "tags", widget: "text", required: false, default: 'List[""]'}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Alt", name: "alt", widget: "string", required: false}
+      # - {label: "Alt", name: "alt", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown" }
