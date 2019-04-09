@@ -15,7 +15,7 @@ tags:
   - tag7
   - tag8
   - tag9
-image: ''
+image: /uploads/gastroverdic.png
 ---
 
 ## Why do we use it?
