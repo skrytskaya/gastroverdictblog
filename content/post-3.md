@@ -6,7 +6,7 @@ tags:
   - javascript
   - react
   - gatsby
-image: ''
+image: /uploads/gastroverdic.png
 ---
 
 ## Why do we use it?
