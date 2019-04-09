@@ -6,5 +6,6 @@ tags:
   - javascript
   - react
 image: /uploads/60845a3f-bb76-4c7d-84e1-3baba0114eca.png
+alt: test
 ---
 test body
