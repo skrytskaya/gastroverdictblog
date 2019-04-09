@@ -5,7 +5,7 @@ description: test
 tags:
   - javascript
   - react
-image: ''
+image: /uploads/gastroverdic.png
 ---
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
