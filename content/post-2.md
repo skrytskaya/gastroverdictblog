@@ -1,8 +1,11 @@
 ---
-title: My second Blog post
 date: '2019-03-15T17:12:33.962Z'
-image: /assets/images/gastroverdict.png
-tags: ['javascript','react']
+title: My second Blog post
+description: test
+tags:
+  - javascript
+  - react
+image: ''
 ---
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
