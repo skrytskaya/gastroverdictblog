@@ -30,7 +30,7 @@ function BlogPost(props) {
                     <img
                         src={image} 
                         // sizes="(min-width: 40em) 80vw, 100vw"
-                        alt={`${alt ? alt : 'image' }`}
+                        // alt={`${alt ? alt : 'image' }`}
                     />
                 }
                 </div>
