@@ -74,7 +74,6 @@ query PostQuery($slug: String!) {
         title
         tags
         image 
-        alt
        }
    }
    site {
