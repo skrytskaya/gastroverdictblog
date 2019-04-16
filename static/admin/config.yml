@@ -4,11 +4,6 @@ backend:
 
 media_folder: static/uploads
 public_folder: /uploads
-media_library:
-  name: uploadcare
-  config:
-    publicKey: d3e17c625e7b2f388482
-
 collections:
   - name: "blog"
     label: "Blog"
@@ -20,6 +15,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Featured Image", name: "image", widget: "image", required: false, media_library: {config: {multiple: true, previewStep: false}}}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      # - {label: "Featured Image", name: "image", widget: "image", required: false, media_library: {config: {multiple: true, previewStep: false}}}
       # - {label: "Alt", name: "alt", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown" }
