@@ -23,39 +23,43 @@ function BlogPost(props) {
                 url={url}
                 pathname={props.location.pathname}
             />
-            <div className="post">
-                <h1>{title}</h1>
-                <div className="post__image">
-                    {image && 
-                    <img
-                        src={image} 
-                        // sizes="(min-width: 40em) 80vw, 100vw"
-                        // alt={`${alt ? alt : 'image' }`}
-                    />
-                }
-                </div>
-                
-                {/* {image && 
-                    <Img 
-                        fluid={image.childImageSharp.fluid} 
-                        alt={`${alt ? alt : 'image' }`}
-                    />
-                } */}
-                <div className="post__content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
-                <div className="post__tags">
-                    <span>Tagged in </span>
-                    <div className="post__tags-wrapper">
-                        {tags.map((tag, i) => (
-                            <a href={`/${tag}`} key={i} style={{ marginLeft: "1rem" }} >{tag}</a>
-                        ))}
+            <div className="post-container">
+                <div className="post">
+                    <h1>{title}</h1>
+                    <div className="post__image">
+                        {image && 
+                        <img
+                            src={image} 
+                            // sizes="(min-width: 40em) 80vw, 100vw"
+                            // alt={`${alt ? alt : 'image' }`}
+                        />
+                    }
                     </div>
+                    
+                    {/* {image && 
+                        <Img 
+                            fluid={image.childImageSharp.fluid} 
+                            alt={`${alt ? alt : 'image' }`}
+                        />
+                    } */}
+                    <div className="post__content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+                    <div className="post__tags">
+                        <span>Tagged in </span>
+                        <div className="post__tags-wrapper">
+                            {tags.map((tag, i) => (
+                                <a href={`/${tag}`} key={i} style={{ marginLeft: "1rem" }} >{tag}</a>
+                            ))}
+                        </div>
+                    </div>
+                    <PrevNext prev={prev && prev.node} next={next && next.node} />
                 </div>
+                <div className="sidebar">
                 <Share 
                     title={title} 
                     url={url} 
                     pathname={props.location.pathname} 
-                />  
-                <PrevNext prev={prev && prev.node} next={next && next.node} />
+                />           
+            </div>
             </div>
         </Layout>
     )

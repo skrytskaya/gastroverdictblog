@@ -22,6 +22,15 @@
     }
 }
 
+.post-container {
+    display: flex;
+
+    @include respond(phone) {
+        display: block;
+    }
+    
+}
+
 .post {
     &__image {
         display: flex;
@@ -36,6 +45,7 @@
     }
     &__content {
         margin-top: 3rem;
+
         @include respond(phone) {
             font-size: 2rem;
         }
@@ -62,6 +72,13 @@
             padding-bottom: 0;
         }
     }
+}
+
+.sidebar {
+    height: 10rem;
+    top: 10rem;
+    position: sticky;
+    position: -webkit-sticky;
 }
 
 .link {
