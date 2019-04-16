@@ -6,4 +6,6 @@ tags:
   - test
 image: /uploads/port.jpg
 ---
+![](/uploads/port.jpg)
+
 testttt
