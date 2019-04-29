@@ -12,7 +12,7 @@ function BlogPost(props) {
     // const thumbnail = props.data.markdownRemark.frontmatter.image && props.data.markdownRemark.frontmatter.image.childImageSharp.resize.src
     const { title, image, tags, alt } = props.data.markdownRemark.frontmatter;
     const { prev, next } = props.pageContext;
-    console.log({image})
+    console.log({ image })
 
     return (
         <Layout>
@@ -26,16 +26,16 @@ function BlogPost(props) {
             <div className="post-container">
                 <div className="post">
                     <h1>{title}</h1>
-                    <div className="post__image">
-                        {image && 
-                        <img
-                            src={image} 
+                    {image &&
+                        <div className="post__image">
+                            <img
+                                src={image}
                             // sizes="(min-width: 40em) 80vw, 100vw"
                             // alt={`${alt ? alt : 'image' }`}
-                        />
+                            />
+                        </div>
                     }
-                    </div>
-                    
+
                     {/* {image && 
                         <Img 
                             fluid={image.childImageSharp.fluid} 
@@ -43,23 +43,25 @@ function BlogPost(props) {
                         />
                     } */}
                     <div className="post__content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
-                    <div className="post__tags">
-                        <span>Tagged in </span>
-                        <div className="post__tags-wrapper">
-                            {tags.map((tag, i) => (
-                                <a href={`/${tag}`} key={i} style={{ marginLeft: "1rem" }} >{tag}</a>
-                            ))}
+                    {tags && 
+                        <div className="post__tags">
+                            <span>Tagged in </span>
+                            <div className="post__tags-wrapper">
+                                {tags.map((tag, i) => (
+                                    <a href={`/${tag}`} key={i} style={{ marginLeft: "1rem" }} >{tag}</a>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    }
                     <PrevNext prev={prev && prev.node} next={next && next.node} />
                 </div>
                 <div className="sidebar">
-                <Share 
-                    title={title} 
-                    url={url} 
-                    pathname={props.location.pathname} 
-                />           
-            </div>
+                    <Share
+                        title={title}
+                        url={url}
+                        pathname={props.location.pathname}
+                    />
+                </div>
             </div>
         </Layout>
     )
