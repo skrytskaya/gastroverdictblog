@@ -2,6 +2,8 @@
 date: 2019-04-16T10:16:28.605Z
 title: images
 description: image test
+tags:
+  - test
 ---
 image one
 
