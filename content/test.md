@@ -3,7 +3,7 @@ date: 2019-05-10T09:41:47.293Z
 title: My First Blog Post
 description: A little background and context about me
 tags:
-  - about
+  - aboutme
 image: ''
 ---
 Hello everyone,
