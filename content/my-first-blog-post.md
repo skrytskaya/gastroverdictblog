@@ -4,6 +4,7 @@ title: My First Blog Post
 description: A little background and context about me
 tags:
   - aboutme
+  - biography
 image: ''
 ---
 Hello everyone,
