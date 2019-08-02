@@ -60,7 +60,8 @@
     }
 
     &__tags {
-        padding: 3rem;
+        padding: 3rem 3rem 3rem 10rem;
+
         text-align: center;
 
         a {
@@ -79,6 +80,7 @@
 .sidebar {
     height: 10rem;
     top: 10rem;
+    width: 10rem;
     position: sticky;
     position: -webkit-sticky;
 }
