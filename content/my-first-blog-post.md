@@ -5,7 +5,7 @@ description: A little background and context about me
 tags:
   - aboutme
   - biography
-image: ''
+image: /uploads/gastroverdic.png
 ---
 Hello everyone,
 
