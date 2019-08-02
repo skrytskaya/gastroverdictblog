@@ -1,9 +1,6 @@
 import React from 'react'
 import './about.scss'
 
-import Datetime from '../assets/images/datetime.png'
-import Port from '../assets/images/port.jpg'
-
 import Layout from '../components/layout'
 
 

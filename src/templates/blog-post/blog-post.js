@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import PrevNext from '../../components/prevnext/prevnext'
 import MetaTags from '../../components/metatags'
 import Share from '../../components/share/share'
-import Img from 'gatsby-image'
 import './blog-post.scss'
 
 function BlogPost(props) {
