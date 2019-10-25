@@ -1,6 +1,7 @@
-backend:
-  name: github
-  repo: skrytskaya/gastroverdictblog 
+ name: git-gateway
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
 
 media_folder: static/uploads
 public_folder: /uploads
