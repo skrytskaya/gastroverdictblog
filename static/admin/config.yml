@@ -1,4 +1,5 @@
- name: git-gateway
+backend:
+  name: git-gateway
   accept_roles:
     - admin
     - editor
